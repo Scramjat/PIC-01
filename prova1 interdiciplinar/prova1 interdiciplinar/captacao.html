@@ -1,0 +1,370 @@
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Captação de Imóveis</title>
+<link rel="shortcut icon" href="favicons/favicon-16x16.png">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --nav-bg-color: #003da5;
+    --nav-text-color: #e60e16; /* Mantendo o padrão de cores */
+    --button-bg-color: #003da5;
+    --button-hover-bg-color: #002d8a;
+    --button-text-color: rgba(0, 0, 0, 0.795);
+    --body-bg-color: #ffffff;
+    --form-bg-color: #ffffff;
+    --form-border-color: #ccc;
+    --tab-bg-color: #ddd;
+    --tab-active-bg-color: #003da5;
+    --tab-active-text-color: #ffffff;
+    --footer-bg-color: #003da5;
+}
+
+/* Reseta margens, padding e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    background: linear-gradient(to right, #7f7ff8, #ddddff);
+    color: #000;
+}
+
+/* Estilo da navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    padding: 10px 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--nav-text-color);
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: aliceblue;
+}
+
+.botlog {
+    display: flex;
+    padding-right: 20px;
+}
+
+.button1 {
+    background-color: #404cf5;
+    color: var(--nav-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button1:hover {
+    background-color: var(--button-hover-bg-color);
+    transform: scale(1.05);
+}
+
+.button1:focus {
+    outline: none;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do contêiner */
+.container {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--form-bg-color);
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Formulário */
+form {
+    background-color: var(--form-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 100%;
+    text-align: left; /* Alinha o conteúdo do formulário à esquerda */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left; /* Garante que os labels fiquem alinhados à esquerda */
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block; /* Garante que os inputs sejam exibidos como bloco e alinhados à esquerda */
+}
+
+
+/* Botão de envio */
+.Enviar {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.Enviar:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: #000;
+    margin: 20px 0;
+}
+
+/* Abas */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    background: var(--tab-bg-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    font-size: large;
+    border-width: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #b0b0b0;
+}
+
+.tab.active {
+    background-color: var(--tab-active-bg-color);
+    color: var(--tab-active-text-color);
+}
+
+/* Conteúdo das abas */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--nav-text-color);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.button{
+    padding: 0.5rem 1rem;
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    font-size: large;
+    border-width: 1px;
+}
+
+
+
+
+
+
+
+</style></head><body>
+
+
+    <header>
+        <nav> 
+            <img src="favicons/android-chrome-192x192.png" alt="Logotipo" width="120"
+            height="120">
+        <ul class="menu">
+            <li><a class="Cbç" href="index.html">Home</a></li>
+            <li><a class="Cbç" href="captacao.html">Captação</a></li>
+        </ul>
+        <div class="botlog">
+            <a href="login.html"><button class="button1">Login</button></a>
+        </div>
+    </nav>
+    </header>
+
+    <div class="container">
+        <h1>Cadastro de Captação de Imóveis</h1>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="openTab(event, 'propertyInfo')">Informações do Imóvel</button>
+            <button class="tab" onclick="openTab(event, 'ownerInfo')">Informações do Proprietário</button>
+            <button class="tab" onclick="openTab(event, 'documents')">Documentos</button>
+        </div>
+
+        <form id="propertyForm">
+            <div id="propertyInfo" class="tab-content active">
+                <h2>Informações do Imóvel</h2>
+                <label for="propertyType">Tipo de Imóvel:</label>
+                <select id="propertyType" required>
+                    <option value=""></option>
+                    <option value="casa">Casa</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="terreno">Terreno</option>
+                    <option value="comercial">Comercial</option>
+                </select>
+
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" required>
+
+                <label for="area">Área (m²):</label>
+                <input type="number" id="area" required>
+
+                <label for="price">Preço (R$):</label>
+                <input type="number" id="price" required>
+
+                <label for="propertyType">Situação do Imóvel</label>
+                <select id="propertyType" required>
+                    <option value=""></option>
+                    <option value="casa">Venda</option>
+                    <option value="apartamento">Alugar</option>
+                    <option value="terreno">Venda e Alugar</option>
+                </select>
+                
+                <label for="address">Condominio Mensal (R$):</label>
+                <input type="text" id="price" required>
+
+                <label for="address">IPTU anual (R$):</label>
+                <input type="text" id="price" required>
+
+            </div>
+
+            <div id="ownerInfo" class="tab-content">
+                <h2>Informações do Proprietário</h2>
+                <label for="ownerName">Nome do Proprietário:</label>
+                <input type="text" id="ownerName" required>
+
+                <label for="ownerCPF">CPF do Proprietário:</label>
+                <input type="text" id="ownerCPF" required>
+
+                <label for="ownerPhone">Telefone do Proprietário:</label>
+                <input type="tel" id="ownerPhone" required>
+
+                <label for="ownerEmail">E-mail do Proprietário:</label>
+                <input type="email" id="ownerEmail" required>
+            </div>
+
+            <div id="documents" class="tab-content">
+                <h2>Documentos</h2>
+                <label for="codigoVenal">Código Venal:</label>
+                <input type="file" id="codigoVenal" accept=".pdf,.doc,.docx">
+
+                <label for="otherDocuments">Outros Documentos:</label>
+                <input type="file" id="otherDocuments" accept=".pdf,.doc,.docx" multiple>
+            </div>
+
+            <button type="submit" class="button">Cadastrar Imóvel</button>
+        </form>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabContent, tabLinks;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            tabLinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById('propertyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const propertyType = document.getElementById('propertyType').value;
+            const address = document.getElementById('address').value;
+            const area = document.getElementById('area').value;
+            const price = document.getElementById('price').value;
+            const description = document.getElementById('description').value;
+            const ownerName = document.getElementById('ownerName').value;
+            const ownerCPF = document.getElementById('ownerCPF').value;
+            const ownerPhone = document.getElementById('ownerPhone').value;
+            const ownerEmail = document.getElementById('ownerEmail').value;
+            const codigoVenal = document.getElementById('codigoVenal').files[0];
+
+            const propertyItem = document.createElement('div');
+            propertyItem.className = 'property-item';
+            propertyItem.innerHTML = `
+                <h3>${propertyType.charAt(0).toUpperCase() + propertyType.slice(1)}</h3>
+                <p><strong>Endereço:</strong> ${address}</p>
+                <p><strong>Área:</strong> ${area} m²</p>
+                <p><strong>Preço:</strong> R$ ${parseFloat(price).toLocaleString('pt-BR')}</p>
+                <p><strong>Descrição:</strong> ${description}</p>
+                <p><strong>Proprietário:</strong> ${ownerName}</p>
+                <p><strong>CPF do Proprietário:</strong> ${ownerCPF}</p>
+                <p><strong>Telefone do Proprietário:</strong> ${ownerPhone}</p>
+                <p><strong>E-mail do Proprietário:</strong> ${ownerEmail}</p>
+                <p><strong>Código Venal:</strong> ${codigoVenal ? codigoVenal.name : 'Não enviado'}</p>
+            `;
+
+            document.getElementById('propertyList').appendChild(propertyItem);
+
+            // Limpar o formulário
+            this.reset();
+        });
+    </script>
+</body>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+    <p>&copy; 2024 Meu Site. Todos os Direitos Reservados.</p>
+</footer>
+
+</html>
+

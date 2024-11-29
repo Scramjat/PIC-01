@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --nav-bg-color: #003da5;
+    --nav-text-color: #e60e16;
+    --button-bg-color: #003da5;
+    --button-text-color: rgba(0, 0, 0, 0.795);
+    --body-bg-color: #ffffff;
+    --gradient-bg-start: #7f7ff8;
+    --gradient-bg-end: #ddddff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: large;
+    background: linear-gradient(to right, var(--gradient-bg-start), var(--gradient-bg-end));
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    height: 120px;
+    padding: 0 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none; 
+    color: var(--nav-text-color);
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: aliceblue;
+}
+.button{
+    padding: 0.5rem 1rem;
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    border-radius: 5px;
+    font-size: large;
+    border-width: 1px;
+}
+
+.button1 {
+    background-color: #404cf5;
+    color: var(--nav-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button1:hover {
+    background-color: #002d8a;
+    transform: scale(1.05);
+}
+
+.button1:focus {
+    outline: none;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    width: 30pc;
+    height: auto;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    text-align: right;
+    padding: 1px;
+    margin-left: 0;
+}
+
+footer {
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000000; /* Cor do texto para combinar com o cabeçalho */
+    margin: 20px 0; /* Adiciona um pouco de espaço em cima e embaixo */
+}
+
+.imoveis-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Espaçamento entre os cartões */
+    padding: 20px;
+    justify-items: center;
+}
+
+.imovel-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imovel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.imovel-imagem {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+p {
+    padding: 0 10px;
+    color: #555;
+    font-size: 0.95rem; /* Ajusta o tamanho do texto para uma leitura mais confortável */
+}
+
+.detalhes-link {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background-color: var(--nav-bg-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.detalhes-link:hover {
+    background-color: #002d8a; /* Tom escuro do botão */
+}
+

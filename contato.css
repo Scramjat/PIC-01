@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --nav-bg-color: #003da5;
+    --nav-text-color: #e60e16; /* Ajustada para manter o padrão de cores */
+    --button-bg-color: #003da5;
+    --button-text-color: rgba(0, 0, 0, 0.795);
+    --body-bg-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    padding: 10px 20px; /* Ajustado para dar um pouco de espaçamento */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--nav-text-color);
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: aliceblue;
+}
+
+.botlog {
+    display: flex;
+    padding-right: 20px;
+}
+
+.button1 {
+    background-color: #404cf5; /* Cor de fundo igual ao cabeçalho */
+    color: var(--nav-text-color); /* Cor do texto igual ao cabeçalho */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: large; /* Tamanho da fonte igual ao do cabeçalho */
+    font-family: 'Poppins', sans-serif; /* Fonte igual à usada no cabeçalho */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s, transform 0.2s; /* Efeito de transição suave */
+}
+
+.button1:hover {
+    background-color: #002d8a; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento do tamanho do botão */
+}
+
+.button1:focus {
+    outline: none; /* Remove o contorno padrão quando o botão é focado */
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave quando o botão é focado */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    background: linear-gradient(to right, #7f7ff8, #ddddff);
+    color: #000;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%; /* Ajuste de largura */
+    max-width: 800px; /* Largura máxima para formatação em telas grandes */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.Enviar {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Enviar:hover {
+    background-color: #002d8a; /* Cor de fundo ao passar o mouse */
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000000; /* Cor do texto para combinar com o cabeçalho */
+    margin: 20px 0; /* Adiciona um pouco de espaço em cima e embaixo */
+}
+
+footer {
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
